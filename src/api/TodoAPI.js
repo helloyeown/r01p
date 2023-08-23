@@ -10,3 +10,17 @@ export const getList = async() => {
     return res.data
 
 }
+
+export const getRead = async(tno) => {
+
+    const res = await axios.get(`${server}/${tno}`)
+    return res.data
+
+}
+
+export const deleteTodo = async(tno) => {
+
+    const res = await axios.delete(`${server}/${tno}`)
+    return res.data
+
+}
